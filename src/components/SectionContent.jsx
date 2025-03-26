@@ -117,6 +117,9 @@ const SectionContent = ({project}) => {
                 {Object.prototype.hasOwnProperty.call(project, "more") && <Button color="warning" variant="bordered" startContent={<IoGameController />} onPress={()=>{handleButtonClick(project.more)}}>
                 more
                 </Button>}
+                {Object.prototype.hasOwnProperty.call(project, "play") && <Button color="warning" variant="bordered" startContent={<IoGameController />} onPress={()=>{handleButtonClick(project.play)}}>
+                play
+                </Button>}
                 </div>
 
                 

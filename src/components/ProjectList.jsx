@@ -77,12 +77,36 @@ export const spaceInvaders =
 }
 
 
+export const horseLocomotion = 
+{
+  title: "Horse Locomotion System",
+  description: "This project implements an advanced horse locomotion system in Unreal Engine, utilizing motion matching for fluid and responsive transitions across various movement states such as idle, walk, trot, canter, gallop, and sprint. The system features dynamic mounting, where the player's position relative to the horse triggers automatic AI adjustments to position the player correctly before executing the mounting animation. Sudden changes in movement direction are handled with smooth transitions, ensuring control and responsiveness even without dedicated pivot animations. The rider's head orientation is driven by the player's view, and inverse kinematics (IK) is applied to the rider's hands and reins, contributing to more natural interactions and improving overall realism in the system.",
+  tags:[ "Blueprint","Animation", "Motion Matching", "Unreal Engine"],
+  backgroundImage: "/img/horseLocomotion/background.png",
+  play: 'https://drive.google.com/file/d/1i1E2Y9_XJu0J4Ga0CgloJYzAxGFCRgaQ/view?usp=sharing',
+  galeryItems: [
+    {
+        original: 'img/horseLocomotion/horseLoco.gif',
+        thumbnail: 'img/horseLocomotion/th_gif.png',
+      },
+      {
+        original: 'img/horseLocomotion/background.png',
+        thumbnail: 'img/horseLocomotion/background.png',
+      },
+    {
+      original: 'https://www.youtube.com/embed/9nisXo66SGY',
+      thumbnail: 'img/horseLocomotion/tt.png',
+      embedUrl: 'https://www.youtube.com/embed/9nisXo66SGY',
+    },
+  ]
+}
+
 
 export const skinning = 
 {
   title: "Dual Quaternion Skinning ",
   description: "Implementation of Dual Quaternion Skinning (DQS) to address candy wrapping issue with other skinning techniques like Linear Blend Skinning.",
-  tags:["C++", "OpenGL"],
+  tags:["C++", "OpenGL","Animation"],
   github: 'https://github.com/NamiNaziri/SpaceInvaders',
   galeryItems: [
     {
@@ -97,7 +121,7 @@ export const sm_skinning =
 {
   title: "Dual Quaternion Skinning ",
   description: "Implementation of Dual Quaternion Skinning (DQS) to address candy wrapping issue with other skinning techniques like Linear Blend Skinning.",
-  tags:["C++", "OpenGL", "2023"],
+  tags:["C++", "OpenGL","Animation", "2023"],
   link: '/#/Dual-Quaternion-Skinning',
   img: 'img/DQS.gif',
 }
@@ -106,7 +130,7 @@ export const sm_animation =
 {
   title: "Animation System",
   description: "An application for playing and blending animations created from scratch using OpenGL and C++.",
-  tags:["C++", "OpenGL", "2022"],
+  tags:["C++", "OpenGL","Animation", "2022"],
   link: 'https://github.com/NamiNaziri/Skeletal-Animation',
   img: 'img/animation.gif',
 }
@@ -115,7 +139,7 @@ export const sm_ik =
 {
   title: "Jacobian Inverse Kinematics",
   description: "An implementation of inverse kinematics that utilizes the Jacobian matrix.",
-  tags:["C++", "OpenGL", "2023"],
+  tags:["C++", "OpenGL","Animation", "2023"],
   link: '/#/inverse-kinematics',
   img: 'img/IK.gif',
 }

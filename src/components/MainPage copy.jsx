@@ -27,7 +27,7 @@ function MainPage() {
 
   const handlePageOnChange = number => {
     if(number != currentNumber) {
-      console.log(number)
+      // console.log(number)
     setCurrentNumber(number)
     }
    // setPagePercentage(Math.max(((number)/3) * 100,5))

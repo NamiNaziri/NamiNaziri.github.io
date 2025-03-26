@@ -7,10 +7,11 @@ import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation } from 
 import { useMediaQuery } from 'react-responsive';
 import FullScrollPage from './Scroll/FullScrollPage';
 import CVPage from './CV/CVPage';
-import {lostRadiance, spaceInvaders,skinning, sm_skinning, sm_animation, sm_ik, sm_simplify,sm_prototypes } from './ProjectList.jsx'
+import {horseLocomotion, lostRadiance, spaceInvaders,skinning, sm_skinning, sm_animation, sm_ik, sm_simplify,sm_prototypes } from './ProjectList.jsx'
 import SmallProjectsSection from './SmallProjectsSection.jsx';
 import LoadingPage from './LoadingPage.jsx'
 const projects = [
+  horseLocomotion,
   lostRadiance,
   spaceInvaders,
   
@@ -35,11 +36,22 @@ function MainPage() {
   const [currentNumber, setCurrentNumber] = useState(0);
 
   useEffect(() => {
+    const onPageLoad = () => {
+      // console.log('page loaded');
 
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 3800); 
 
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 4000); 
+    };
+
+    // Check if the page has already loaded
+    if (document.readyState === 'complete') {
+      onPageLoad();
+    } else {
+      window.addEventListener('load', onPageLoad, false);
+      return () => window.removeEventListener('load', onPageLoad);
+    }
 
   }, []);
   return ( 

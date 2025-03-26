@@ -11,7 +11,7 @@ import {atomDark as dark} from 'react-syntax-highlighter/dist/esm/styles/prism/'
 
 const MarkdownRenderer = ({markdownObject}) => {
   const [markdown, setMarkdown] = useState(null);
-  console.log(markdownObject)
+  // console.log(markdownObject)
   useEffect(() => {
     fetch(markdownObject.link)
       .then((response) => response.text())

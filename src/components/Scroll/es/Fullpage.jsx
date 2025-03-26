@@ -149,11 +149,11 @@ class Fullpage extends PureComponent {
       scrollLockTiming,
     } = this.props;
 
-    console.log(`handle scroll: ${this.lockScroll}`)
+    // console.log(`handle scroll: ${this.lockScroll}`)
 
     //return false;
     if(this.disableScroll) {
-      console.log('disable scroll')
+      // console.log('disable scroll')
       window.scrollTo({
         top:  translateY * -1,
         left: 0,
@@ -186,7 +186,7 @@ class Fullpage extends PureComponent {
       // this is the scrolling behavior in general. and also finds us the new slide
       window.requestAnimationFrame(() => {
         if (resetScroll) {
-          console.log('reset scroll')
+          // console.log('reset scroll')
           window.scrollTo(0, translateY * -1);
         }
         const {
@@ -196,7 +196,7 @@ class Fullpage extends PureComponent {
 
         const pageYOffset = window.scrollY || 0;
         const delta = pageYOffset -prevScrollPos
-        console.log(`ticking: ${delta}`)
+        // console.log(`ticking: ${delta}`)
         const factor = delta > 0 ? 0.2: 0.8
         const newPrevScrollPos = pageYOffset
         this.setState({
@@ -237,7 +237,7 @@ class Fullpage extends PureComponent {
 
   handleTouchStart = (e) => {
     // Handle touch end event
-    console.log('touchstart')
+    // console.log('touchstart')
    //this.disableScroll = false
    const newPrevTouchScrollPos = e.touches[0].clientY;
    this.setState({
@@ -280,7 +280,7 @@ class Fullpage extends PureComponent {
     const {prevTouchScrollPos} = this.state;
 
 
-    console.log(`touchend ${e.changedTouches[0].clientY - prevTouchScrollPos}`);
+    // console.log(`touchend ${e.changedTouches[0].clientY - prevTouchScrollPos}`);
     //this.disableScroll = false
    
     // const {
@@ -386,7 +386,7 @@ class Fullpage extends PureComponent {
 
       this.lockScroll = true;
       //window.scrollTo(0, translateY * -1);
-      console.log(`instant scroll: ${instantScroll}`)
+      // console.log(`instant scroll: ${instantScroll}`)
       if(instantScroll)
       {
         this.disableScroll =true;

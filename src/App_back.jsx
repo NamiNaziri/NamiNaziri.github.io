@@ -76,7 +76,7 @@ const App = () => {
          setNotificationMessage({message:null, isError: false})
        }, 5000)
 
-      console.log(error.response.data.error)
+      // console.log(error.response.data.error)
     })
   }
   const deletePerson = (id) => {

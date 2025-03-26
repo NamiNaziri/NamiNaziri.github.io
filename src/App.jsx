@@ -40,7 +40,7 @@ const App = () => {
 
   useEffect(() => {
     // Set the active route value when the route changes
-    console.log(location.pathname)
+    // console.log(location.pathname)
     switch(location.pathname)
     {
       case '/':

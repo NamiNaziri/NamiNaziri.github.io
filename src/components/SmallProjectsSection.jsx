@@ -10,7 +10,7 @@ SmallProjectsSection
 
 function SmallProjectsSection({projects, index}) {  
   const isXS = useMediaQuery({ query: '(max-width: 575px)' });
-  console.log(index)
+  // console.log(index)
   const backgroundImage = `/img/bg${index}.jpg`
   
   const dynamicBackgroundImage = {

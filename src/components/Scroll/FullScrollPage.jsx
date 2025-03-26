@@ -11,7 +11,7 @@ const FullScrollPage = ({ children }) => {
     const scrollToBottom = () => {
       //window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
       window.scrollTo({
-        top: 5000,
+        top: 50000,
         left: 0,
         behavior: 'instant'
       });
@@ -26,20 +26,35 @@ const FullScrollPage = ({ children }) => {
       });
     };
 
+    const onPageLoad = () => {
+      // console.log('page loaded');
+
+      setTimeout(() => {
+        scrollToBottom();
+        setTimeout(() => {
+          scrollToTop();
+          setFirstLoad(false);
+        }, 2200);
+      }, 1200); // Delay of 2000ms (2 seconds)
+  
+
+    };
+
+    // Check if the page has already loaded
+    if (document.readyState === 'complete') {
+      onPageLoad();
+    } else {
+      window.addEventListener('load', onPageLoad, false);
+      return () => window.removeEventListener('load', onPageLoad);
+    }
+
     //console.log(document.documentElement.scrollHeight)
     // Trigger the scroll animations on initial load
-    setTimeout(() => {
-      scrollToBottom();
-      setTimeout(() => {
-        scrollToTop();
-        setFirstLoad(false);
-      }, 1200);
-    }, 400); // Delay of 2000ms (2 seconds)
 
     
     //Fullpage.goto(4,)
-    console.log('effect')
-    console.log(4 * window.innerHeight);
+    // console.log('effect')
+    // console.log(4 * window.innerHeight);
     
     //scrollToTop();
     //setTimeout(scrollToTop, 1); // Scroll back to the top after 2 seconds
@@ -48,8 +63,8 @@ const FullScrollPage = ({ children }) => {
   const isXS = useMediaQuery({ query: '(max-width: 575px)' });
     return (
       <Fullpage
-      transitionTiming={isXS? 550 : firstLoad ? 0: 550}
-      scrollLockTiming={isXS? 400: firstLoad ? 0: 250}
+      transitionTiming={firstLoad ? 1: isXS? 550 :  550}
+      scrollLockTiming={firstLoad ? 1: isXS? 400:  250}
       ref={childRef}
       desktopForceStep={true}
       >

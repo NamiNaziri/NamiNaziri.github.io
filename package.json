@@ -33,7 +33,8 @@
     "react-router-dom": "^6.24.1",
     "react-syntax-highlighter": "^15.5.0",
     "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.0",
+    "vite-plugin-strip": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
