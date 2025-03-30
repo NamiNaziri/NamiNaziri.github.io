@@ -3,6 +3,7 @@ import {Chip} from "@nextui-org/react";
 import { FaItchIo } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoGameController } from "react-icons/io5";
+import { FaSteam } from "react-icons/fa";
 import {Button} from "@nextui-org/react";
 import Grid from '@mui/material/Unstable_Grid2';
 import ImageGalleryComponent from './ImageGallery'
@@ -109,16 +110,19 @@ const SectionContent = ({project}) => {
             <div className="flex gap-2">
                 {Object.prototype.hasOwnProperty.call(project, "itch") && 
                 <Button color="danger" variant="bordered" startContent={<FaItchIo />} onPress={()=>{handleButtonClick(project.itch)}}>
-                itch.io
+                Itch.io
                 </Button>}
                 {Object.prototype.hasOwnProperty.call(project, "github") && <Button color="white" variant="bordered" startContent={<FaGithub />} onPress={()=>{handleButtonClick(project.github)}}>
-                github
-                </Button>}
-                {Object.prototype.hasOwnProperty.call(project, "more") && <Button color="warning" variant="bordered" startContent={<IoGameController />} onPress={()=>{handleButtonClick(project.more)}}>
-                more
+                Github
                 </Button>}
                 {Object.prototype.hasOwnProperty.call(project, "play") && <Button color="warning" variant="bordered" startContent={<IoGameController />} onPress={()=>{handleButtonClick(project.play)}}>
-                play
+                Play
+                </Button>}
+                {Object.prototype.hasOwnProperty.call(project, "steam") && <Button style={{ backgroundColor: "#ff5733", color: "#7dccf6", borderColor:"#096292" }} variant="bordered" startContent={<FaSteam />} onPress={()=>{handleButtonClick(project.steam)}}>
+                Steam
+                </Button>}
+                {Object.prototype.hasOwnProperty.call(project, "more") && <Button color="warning" variant="bordered" startContent={<IoGameController />} onPress={()=>{handleButtonClick(project.more)}}>
+                More
                 </Button>}
                 </div>
 

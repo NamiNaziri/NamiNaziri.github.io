@@ -5,7 +5,7 @@ import  {Divider} from "@nextui-org/react";
 const skillSet =[
   {
     Title: "Programming",
-    Set: ["C/C++", "Python", "JavaScrip", "MATLAB", "C#", "SQL"]
+    Set: ["C/C++", "Python", "JavaScript", "MATLAB", "C#", "SQL"]
   },
   {
     Title: "Software",

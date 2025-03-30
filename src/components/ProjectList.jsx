@@ -101,6 +101,36 @@ export const horseLocomotion =
   ]
 }
 
+export const ENDS = 
+{
+  title: "ENDS",
+  description: "I worked as a game programmer on ENDS, focusing on the 3Cs (Character, Control, Camera), making sure of the gameplay’s fluidity and responsiveness. This single-player game combines sandbox and RPG elements, following Rahim and Sonny as they navigate a gritty crime drama. Combat, exploration, and dynamic interactions shape their journey.",
+  tags:["Unreal Engine",  "Motion Matching","Blueprint","Animation", ],
+  backgroundImage: "/img/ends/header.jpg",
+  steam: 'https://store.steampowered.com/app/2870130/ENDS/',
+  more: '/#/ends',
+  galeryItems: [
+    {
+      original: 'https://www.youtube.com/embed/fCXc0gthyeQ',
+      thumbnail: 'img/ends/tumb.jpg',
+      embedUrl: 'https://www.youtube.com/embed/fCXc0gthyeQ',
+    },
+    {
+        original: 'img/ends/6.gif',
+        thumbnail: 'img/ends/6.png',
+      },
+      {
+        original: 'img/ends/7.gif',
+        thumbnail: 'img/ends/7.png',
+      },
+      {
+        original: 'img/ends/frontroll.gif',
+        thumbnail: 'img/ends/frontroll.png',
+      },
+
+  ]
+}
+
 
 export const skinning = 
 {

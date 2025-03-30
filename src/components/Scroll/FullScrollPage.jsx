@@ -34,8 +34,8 @@ const FullScrollPage = ({ children }) => {
         setTimeout(() => {
           scrollToTop();
           setFirstLoad(false);
-        }, 2200);
-      }, 1200); // Delay of 2000ms (2 seconds)
+        }, 700);
+      }, 500); // Delay of 2000ms (2 seconds)
   
 
     };

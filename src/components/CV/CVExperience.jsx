@@ -4,6 +4,16 @@ import "./CVExperience.css"
 
 const Experience =[
   {
+    description: "I worked as a game programmer on ENDS, focusing on the 3Cs (Character, Control, Camera) to ensure gameplay fluidity and responsiveness. I designed and implemented locomotion and combat systems using motion matching, foot locking, and warping techniques to enhance animation quality. I developed a responsive hand-to-hand combat system featuring combo mechanics, paired animations, and environmental interactions. Additionally, I created an interaction system utilizing motion warping and hand IK for seamless character-object alignment. I also integrated the Mutable plugin to implement a dynamic character customization system with an intuitive UI. Lastly, I designed and implemented camera behavior for locomotion, combat, and customization using the Gameplay Camera plugin.",
+    image: "img/concrete_realm_games_logo.jfif",
+    title1:"Programmer, Character Locomotion Development (Motion Matching)",
+    title2:"Concrete Realm",
+    date: "Jan 2025 - Present",
+    location: "Remote"
+
+
+  },
+  {
     description: "I designed and implemented NPC behaviors utilizing behavior trees, enabling dynamic interactions such as mantling using Nav Link Proxies and NPC following of the player or predefined paths. I developed a crowd system using the MassEntity framework, enhancing it by integrating an accessory and animation system for crowd agents. I utilized smart objects to enhance crowd interactions, allowing crowds to identify, claim, and use objects such as benches. Additionally, I analyzed and addressed performance bottlenecks within the crowd systems, resulting in significant optimization and improved frame rates.",
     image: "img/RR.jfif",
     title1:"Game AI Programmer",

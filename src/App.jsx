@@ -28,6 +28,11 @@ const blogs=[
     title:'Inverse Kinematics',
     link: '/blogs/2023-03-14-Inverse-Kinematics.md',
     path:'/inverse-kinematics'
+  },
+  {
+    title:'Ends',
+    link: '/blogs/2025-03-30-ends.md',
+    path:'/ends'
   }
 ]
 
