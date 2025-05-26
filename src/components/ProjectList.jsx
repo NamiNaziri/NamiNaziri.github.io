@@ -124,8 +124,34 @@ export const ENDS =
         thumbnail: 'img/ends/7.png',
       },
       {
-        original: 'img/ends/frontroll.gif',
-        thumbnail: 'img/ends/frontroll.png',
+        original: 'img/ends/steps.gif',
+        thumbnail: 'img/ends/steps.png',
+      },
+      {
+        original: 'img/ends/10.gif',
+        thumbnail: 'img/ends/10.png',
+      },
+      {
+        original: 'img/ends/11.gif',
+        thumbnail: 'img/ends/11.png',
+      },
+      {
+        original: 'img/ends/combatstance.gif',
+        thumbnail: 'img/ends/combatstance.png',
+      },
+      {
+        original: 'img/ends/combat.gif',
+        thumbnail: 'img/ends/combat.png',
+      },
+      
+      {
+        original: 'img/ends/steps.gif',
+        thumbnail: 'img/ends/steps.png',
+      },
+      
+      {
+        original: 'img/ends/vault.gif',
+        thumbnail: 'img/ends/vault.png',
       },
 
   ]
