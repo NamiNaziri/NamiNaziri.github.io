@@ -42,7 +42,7 @@ function MainPage() {
 
       setTimeout(() => {
         setIsLoading(false)
-      }, 3800); 
+      }, 500); 
 
     };
 
