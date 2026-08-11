@@ -1,5 +1,5 @@
 
-# 
+# Favorite Technical Talks
 
 Here, I'll share some of my favorite talks from the Game Developers Conference (GDC) or othe conferences that I've watched.
 

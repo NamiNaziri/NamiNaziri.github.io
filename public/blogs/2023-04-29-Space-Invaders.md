@@ -10,11 +10,11 @@ A space invaders clone using the Unreal engine as an entry for the  **[Games Job
 
 ### Please, Play the game from [itch.io](https://naminaziri.itch.io/space-invaders) and review the code from the [GitHub](https://github.com/NamiNaziri/SpaceInvaders)
 
-<img src="..\assets\images\projects\Nami_Naziri_UE_Challenge.png"  width="60%" height="30%">
+<img src="/assets/images/projects/Nami_Naziri_UE_Challenge.png"  width="60%" height="30%">
 
-<img src="..\assets\images\projects\si_review.png"  width="60%" height="30%">
+<img src="/assets/images/projects/si_review.png"  width="60%" height="30%">
 
-[<img src="..\assets\images\projects\si_youtube.png"  width="60%" height="30%">](https://youtu.be/JWBiKHRHcaw)
+[<img src="/assets/images/projects/si_youtube.png"  width="60%" height="30%">](https://youtu.be/JWBiKHRHcaw)
 
 **In this blog post I will go through the project, answering some questions that Chris asked and also how I used different features of unreal engine to create this game.**
 

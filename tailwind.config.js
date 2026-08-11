@@ -1,42 +1,38 @@
-// /** @type {import('tailwindcss').Config} */
-// import nextui from "@nextui-org/react"
-
-// export default {
-//   content: [
-//     "./index.html",
-//     "./src/**/*.{js,ts,jsx,tsx}",
-//     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-//   ],
-//   theme: {
-//     extend: {},
-//   },
-//   darkMode: "class",
-//   plugins: [nextui()],
-
-// }
-// eslint-disable-next-line no-undef
-const {nextui} = require("@nextui-org/react");
-
-// eslint-disable-next-line no-undef
-module.exports = { 
-  content: [ 
-    
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-
- 
-    // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  
-  ], 
+/* eslint-disable no-undef */
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./index.html', './src/**/*.js', './src/**/*.jsx'],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        base: {
+          950: '#0b0c10',
+          900: '#101218',
+          800: '#14151c',
+          700: '#1c1e28',
+          600: '#262935',
+          500: '#383c4a',
+        },
+        ink: {
+          100: '#eef0f5',
+          300: '#a8adba',
+          500: '#6e7386',
+        },
+        accent: {
+          DEFAULT: '#6d6bff',
+          dim: '#514fd1',
+          soft: 'rgba(109, 107, 255, 0.14)',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
+      boxShadow: {
+        panel: '0 0 0 1px rgba(109,107,255,0.10), 0 20px 60px -20px rgba(0,0,0,0.6)',
+      },
+    },
   },
-  darkMode: "class",
-  plugins: [nextui()],
- 
-  
-  }
-
+  plugins: [],
+}
