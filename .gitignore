@@ -11,6 +11,9 @@ node_modules
 dist-ssr
 *.local
 
+# Personal documents that shouldn't land in a public repo
+/*.pdf
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
