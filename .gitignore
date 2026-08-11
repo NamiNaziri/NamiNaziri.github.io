@@ -11,8 +11,12 @@ node_modules
 dist-ssr
 *.local
 
-# Personal documents that shouldn't land in a public repo
+# Personal documents/screenshots that shouldn't land in a public repo
+# (the site's own images all live under public/, never at the repo root)
 /*.pdf
+/*.jpg
+/*.jpeg
+/*.png
 
 # Editor directories and files
 .vscode/*

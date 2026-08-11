@@ -21,7 +21,7 @@ export default function Home() {
         id="projects"
         eyebrow="Selected Work"
         title="Featured Projects"
-        description="Gameplay and animation systems shipped in Unreal Engine — motion matching, combat, AI, and procedural interaction."
+        description="Gameplay and animation systems shipped in Unreal Engine: motion matching, combat, AI, and procedural interaction."
       >
         <div className="space-y-8">
           {featuredProjects.map((project, i) => (
@@ -31,7 +31,7 @@ export default function Home() {
       </Section>
 
       <Section eyebrow="Also Built" title="Other Projects" description="Smaller technical explorations in animation math, rendering, and engine prototyping.">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {otherProjects.map((project) => {
             const external = project.link.startsWith('http')
             const CardTag = external ? 'a' : Link
@@ -68,7 +68,7 @@ export default function Home() {
       </Section>
 
       <Section eyebrow="Toolbox" title="Skills">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {skills.map((group) => (
             <div key={group.title} className="panel p-4">
               <h4 className="mb-3 font-mono text-xs uppercase tracking-widest text-accent/80">{group.title}</h4>

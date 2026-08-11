@@ -37,7 +37,7 @@ export default function CV() {
 
       <div className="mt-12">
         <CVHeading>Skills</CVHeading>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {skills.map((group) => (
             <div key={group.title}>
               <h3 className="mb-2 text-sm font-semibold text-ink-100">{group.title}</h3>

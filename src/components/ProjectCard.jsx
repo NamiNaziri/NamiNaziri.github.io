@@ -16,7 +16,7 @@ const LINK_META = {
 export default function ProjectCard({ project, reverse = false }) {
   return (
     <article className="panel overflow-hidden">
-      <div className="grid gap-0 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-0 md:grid-cols-2">
         <div className={`p-3 md:p-4 ${reverse ? 'md:order-2' : ''}`}>
           <Gallery items={project.gallery} title={project.title} />
         </div>

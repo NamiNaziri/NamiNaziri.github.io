@@ -4,7 +4,7 @@
 export const posts = [
   {
     slug: 'ends',
-    title: 'ENDS — Building the 3Cs',
+    title: 'ENDS: Building the 3Cs',
     date: '2025-03-30',
     file: 'blogs/2025-03-30-ends.md',
     excerpt: 'Locomotion, combat, and camera work behind the character systems in ENDS.',
@@ -36,7 +36,7 @@ export const posts = [
   },
   {
     slug: 'dailydump-how-to-use-smartobjects',
-    title: 'DailyDump — How to Use Smart Objects',
+    title: 'DailyDump: How to Use Smart Objects',
     date: '2023-03-29',
     file: 'blogs/2023-03-29-DailyDump-How-to-use-smartobjects.md',
     excerpt: 'A practical walkthrough for wiring up gameplay-ability-based smart objects.',
@@ -60,7 +60,7 @@ export const posts = [
   },
   {
     slug: 'dailydump-statetree-smartobjects',
-    title: 'DailyDump — State Tree & Smart Objects',
+    title: 'DailyDump: State Tree & Smart Objects',
     date: '2023-03-04',
     file: 'blogs/2023-03-04-DailyDump-StateTree-SmartObjects.md',
     excerpt: "Notes on State Tree transitions and how they pair with Smart Objects.",

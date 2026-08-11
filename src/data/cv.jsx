@@ -24,7 +24,7 @@ export const experience = [
     highlights: [
       'NPC behaviors via behavior trees, including mantling with Nav Link Proxies and player/path following',
       'Crowd system built on the MassEntity framework, with an accessory and animation system for crowd agents',
-      'Smart-object-driven crowd interactions — agents identify, claim, and use props such as benches',
+      'Smart-object-driven crowd interactions: agents identify, claim, and use props such as benches',
       'Diagnosed and fixed crowd-system performance bottlenecks, improving frame rate',
     ],
   },
@@ -37,11 +37,11 @@ export const experience = [
     description: 'Animation programming contract on a third-person action title.',
     highlights: [
       'Owned the 3Cs (Character, Control, Camera) for the player character, iterating on animation and camera systems for responsive movement and combat feel',
-      // TODO: confirm exact wording — LinkedIn export lost two words here ("locomotion, ___, ___, and related features")
+      // TODO: confirm exact wording, LinkedIn export lost two words here ("locomotion, ___, ___, and related features")
       "Designed and implemented the player's animation system in C++ and Animation Blueprints, including locomotion, combat, and traversal",
       'Built and maintained multi-stage boss animation systems using Animation Layer Interfaces, and experimented with motion matching for boss locomotion',
       'Developed gameplay abilities and core systems within the Gameplay Ability System, covering rolling, magic abilities, input buffering, and a targeting system',
-      // TODO: confirm exact wording — LinkedIn export cut off after "resolving numerous ___"
+      // TODO: confirm exact wording, LinkedIn export cut off after "resolving numerous ___"
       'Collaborated with a cross-disciplinary team of programmers and designers, teaching best practices for the animation systems and resolving numerous edge cases',
     ],
   },
@@ -51,7 +51,7 @@ export const experience = [
     image: '/img/concrete_realm_games_logo.jfif',
     date: 'Jan 2025 - May 2025',
     location: 'Remote',
-    description: 'Programmer on ENDS, focused on the 3Cs — character, control, and camera.',
+    description: 'Programmer on ENDS, focused on the 3Cs: character, control, and camera.',
     highlights: [
       'Locomotion & combat systems built on motion matching, foot locking, and motion warping',
       'Hand-to-hand combat system with combos, paired animations, and environmental interactions',

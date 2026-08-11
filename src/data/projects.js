@@ -5,7 +5,7 @@ export const featuredProjects = [
   {
     slug: 'ends',
     title: 'ENDS',
-    role: 'Gameplay Programmer — Character, Control, Camera',
+    role: 'Gameplay Programmer (Character, Control, Camera)',
     description:
       "I worked as a game programmer on ENDS, focusing on the 3Cs (Character, Control, Camera), making sure of the gameplay's fluidity and responsiveness. This single-player game combines sandbox and RPG elements, following Rahim and Sonny as they navigate a gritty crime drama. Combat, exploration, and dynamic interactions shape their journey.",
     highlights: [
@@ -61,7 +61,7 @@ export const featuredProjects = [
     title: 'Space Invaders',
     role: 'Gameplay Programmer',
     description:
-      "This is a Space Invaders clone made using Unreal Engine as an entry for the 'Games Job Fair Spring 2023 — Unreal Engine Programming Challenge'. Selected as one of the top 3 entries; the code structure was reviewed by Chris Rock, Lead Gameplay Programmer at Neon Koi (PlayStation).",
+      "This is a Space Invaders clone made using Unreal Engine as an entry for the 'Games Job Fair Spring 2023 - Unreal Engine Programming Challenge'. Selected as one of the top 3 entries; the code structure was reviewed by Chris Rock, Lead Gameplay Programmer at Neon Koi (PlayStation).",
     highlights: [
       'Top 3 entry in the Games Job Fair Unreal Engine Programming Challenge',
       'Code reviewed by Neon Koi (PlayStation) Lead Gameplay Programmer',
@@ -85,9 +85,9 @@ export const featuredProjects = [
   {
     slug: 'lost-radiance',
     title: 'Lost Radiance',
-    role: 'Programmer — 48h Game Jam',
+    role: 'Programmer, 48h Game Jam',
     description:
-      "Created in Unreal Engine 5 for the Games Now! Game Jam 2023, on the theme 'missing'. A cosmic odyssey where light has gone astray and you become the new star amidst the void — as shadows and darkness compel other stars to assail you, your survival becomes crucial. Showcased at Kumma Gallery and reviewed by judges from Supercell, Housemarque, Futureplay, and Platonic Partnership.",
+      "Created in Unreal Engine 5 for the Games Now! Game Jam 2023, on the theme 'missing'. A cosmic odyssey where light has gone astray and you become the new star amidst the void. As shadows and darkness compel other stars to assail you, your survival becomes crucial. Showcased at Kumma Gallery and reviewed by judges from Supercell, Housemarque, Futureplay, and Platonic Partnership.",
     highlights: [
       'Selected for the Kumma Gallery showcase out of the game jam entries',
       'Praised for simple, engaging mechanics and strong visual presentation',
