@@ -1,29 +1,31 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaItchIo } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaItchIo, FaChevronDown } from 'react-icons/fa'
 import { personalInfo } from '../data/cv.jsx'
 
 const focusAreas = ['Motion Matching', 'Procedural Animation', 'Inverse Kinematics', 'Behavior Trees & AI', 'Combat Systems']
 
 export default function Hero({ onViewProjects }) {
   return (
-    <section id="home" className="relative overflow-hidden border-b border-base-700/60">
+    <section id="home" data-panel="Intro" className="snap-panel items-center overflow-hidden">
       <div className="bg-grid-fade pointer-events-none absolute inset-0" aria-hidden="true" />
-      <div className="relative mx-auto max-w-3xl px-6 py-24 text-center md:py-32">
+
+      <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <p className="section-eyebrow mb-4">Gameplay &amp; Animation Programmer</p>
-          <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-ink-100 md:text-5xl">
+          <p className="section-eyebrow mb-4">{personalInfo.title}</p>
+          <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-ink-100 md:text-7xl">
             {personalInfo.name}
           </h1>
-          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-ink-300 md:text-base">{personalInfo.summary}</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
+
+          <div className="mt-8 flex flex-wrap justify-center gap-2">
             {focusAreas.map((f) => (
-              <span key={f} className="tag-chip">
+              <span key={f} className="pill">
                 {f}
               </span>
             ))}
           </div>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <button type="button" onClick={onViewProjects} className="btn-link border-accent text-accent">
               View Projects
             </button>
@@ -44,6 +46,15 @@ export default function Hero({ onViewProjects }) {
           </div>
         </motion.div>
       </div>
+
+      <button
+        type="button"
+        onClick={onViewProjects}
+        aria-label="Scroll to projects"
+        className="hide-when-short absolute inset-x-0 bottom-8 z-10 mx-auto animate-bounce text-ink-500 transition-colors hover:text-accent"
+      >
+        <FaChevronDown className="mx-auto" />
+      </button>
     </section>
   )
 }

@@ -1,37 +1,46 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { FaAward } from 'react-icons/fa'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
-import ProjectCard from '../components/ProjectCard'
+import ProjectPanel from '../components/ProjectPanel'
+import SectionDots from '../components/SectionDots'
+import Footer from '../components/Footer'
 import TagChip from '../components/TagChip'
 import TimelineItem from '../components/TimelineItem'
 import { featuredProjects, otherProjects } from '../data/projects'
-import { skills, experience, awards } from '../data/cv.jsx'
+import { skills, experience } from '../data/cv.jsx'
 
 export default function Home() {
+  // Full-page snapping is a document-level behaviour, so it is scoped to this
+  // route by a class on <html> rather than baked into the global stylesheet.
+  useEffect(() => {
+    document.documentElement.classList.add('snap-home')
+    return () => document.documentElement.classList.remove('snap-home')
+  }, [])
+
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById(featuredProjects[0]?.slug)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <>
+      <SectionDots />
+
       <Hero onViewProjects={scrollToProjects} />
 
-      <Section
-        id="projects"
-        eyebrow="Selected Work"
-        title="Featured Projects"
-        description="Gameplay and animation systems shipped in Unreal Engine: motion matching, combat, AI, and procedural interaction."
-      >
-        <div className="space-y-8">
-          {featuredProjects.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} reverse={i % 2 === 1} />
-          ))}
-        </div>
-      </Section>
+      {featuredProjects.map((project) => (
+        <ProjectPanel key={project.slug} project={project} />
+      ))}
 
-      <Section eyebrow="Also Built" title="Other Projects" description="Smaller technical explorations in animation math, rendering, and engine prototyping.">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <Section
+        panel
+        id="other-projects"
+        panelLabel="Other Projects"
+        eyebrow="Also Built"
+        title="Other Projects"
+        description="Smaller technical explorations in animation math, rendering, and engine prototyping."
+      >
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {otherProjects.map((project) => {
             const external = project.link.startsWith('http')
             const CardTag = external ? 'a' : Link
@@ -54,7 +63,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-1 flex-col p-4">
                   <h3 className="font-semibold text-ink-100">{project.title}</h3>
-                  <p className="mt-1 flex-1 text-sm text-ink-300">{project.description}</p>
+                  <p className="mt-1 flex-1 text-sm text-ink-300 line-clamp-3">{project.description}</p>
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {project.tags.map((t) => (
                       <TagChip key={t}>{t}</TagChip>
@@ -67,7 +76,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Toolbox" title="Skills">
+      <Section panel id="skills" eyebrow="Toolbox" title="Skills">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {skills.map((group) => (
             <div key={group.title} className="panel p-4">
@@ -82,8 +91,14 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Career" title="Experience" description="The full history, including education and certificates, lives on the CV page.">
-        <div className="space-y-4">
+      <Section
+        panel
+        id="experience"
+        eyebrow="Career"
+        title="Experience"
+        description="The full history, including education and certificates, lives on the CV page."
+      >
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           {experience.map((item) => (
             <TimelineItem key={item.title} item={item} compact />
           ))}
@@ -93,19 +108,7 @@ export default function Home() {
         </Link>
       </Section>
 
-      <Section eyebrow="Recognition" title="Awards">
-        <ul className="space-y-4">
-          {awards.map((award) => (
-            <li key={award.title} className="panel flex gap-3 p-4">
-              <FaAward className="mt-1 flex-shrink-0 text-accent" />
-              <div>
-                <p className="font-semibold text-ink-100">{award.title}</p>
-                <div className="mt-1 text-sm text-ink-300">{award.body}</div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </Section>
+      <Footer variant="panel" />
     </>
   )
 }

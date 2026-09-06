@@ -25,9 +25,59 @@ body {
   color: theme('colors.ink.100');
 }
 
+/* Full-page panels.
+   Snapping is desktop-only: on short or narrow viewports the panels fall back to
+   normal document flow so tall content can never be trapped inside a snap point. */
+.snap-panel {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+  html.snap-home {
+    scroll-snap-type: y mandatory;
+  }
+  html.snap-home .snap-panel {
+    height: 100vh;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+/* Decorative extras that would crowd the content on short viewports. */
+@media (max-height: 640px) {
+  .hide-when-short {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  html.snap-home {
+    scroll-snap-type: none;
+  }
+}
+
 @layer components {
   .panel {
     @apply relative rounded-lg border border-base-600/60 bg-base-800/60 shadow-panel backdrop-blur-sm;
+  }
+
+  /* Rounded pill tags used on the project panels (see reference design). */
+  .pill {
+    @apply rounded-full border border-white/15 bg-white/10 px-3.5 py-1 text-xs text-ink-100 backdrop-blur-sm md:text-sm;
+  }
+
+  /* Outlined action button on the project panels; colour comes from a modifier. */
+  .btn-panel {
+    @apply inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium backdrop-blur-sm transition-colors;
   }
 
   .panel-header {

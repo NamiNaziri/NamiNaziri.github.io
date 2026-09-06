@@ -1,5 +1,7 @@
 // Featured project data, ported from the previous site's ProjectList.jsx.
 // Gallery item `kind` is one of: 'image' | 'youtube'.
+// `poster` is the blurred panel backdrop, so it points at the downscaled
+// copies in /img/backdrops (~93KB total vs 3MB for the full-size art).
 
 export const featuredProjects = [
   {
@@ -16,7 +18,7 @@ export const featuredProjects = [
       'Gameplay Camera system for locomotion, combat, and customization',
     ],
     tags: ['Unreal Engine', 'Motion Matching', 'Blueprint', 'Animation', 'C++'],
-    poster: '/img/ends/header.jpg',
+    poster: '/img/backdrops/ends.jpg',
     links: {
       steam: 'https://store.steampowered.com/app/2870130/ENDS/',
       blog: '/blog/ends',
@@ -46,7 +48,7 @@ export const featuredProjects = [
       'Head-orientation and hand/rein IK driven by player view',
     ],
     tags: ['Blueprint', 'Animation', 'Motion Matching', 'Unreal Engine'],
-    poster: '/img/horseLocomotion/background.png',
+    poster: '/img/backdrops/horse-locomotion.jpg',
     links: {
       play: 'https://drive.google.com/file/d/1i1E2Y9_XJu0J4Ga0CgloJYzAxGFCRgaQ/view?usp=sharing',
     },
@@ -67,7 +69,7 @@ export const featuredProjects = [
       'Code reviewed by Neon Koi (PlayStation) Lead Gameplay Programmer',
     ],
     tags: ['C++', 'Blueprint', 'Unreal Engine'],
-    poster: '/img/spaceInvader/background.png',
+    poster: '/img/backdrops/space-invaders.jpg',
     links: {
       itch: 'https://naminaziri.itch.io/space-invaders',
       github: 'https://github.com/NamiNaziri/SpaceInvaders',
@@ -93,7 +95,7 @@ export const featuredProjects = [
       'Praised for simple, engaging mechanics and strong visual presentation',
     ],
     tags: ['C++', 'Blueprint', 'Unreal Engine'],
-    poster: '/img/lostRadiance.jpg',
+    poster: '/img/backdrops/lost-radiance.jpg',
     links: {
       itch: 'https://naminaziri.itch.io/lost-radiance',
     },
