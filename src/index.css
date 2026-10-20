@@ -25,6 +25,11 @@ body {
   color: theme('colors.ink.100');
 }
 
+::selection {
+  background: #ffffff;
+  color: #0b0c10;
+}
+
 /* Full-page panels.
    Snapping is desktop-only: on short or narrow viewports the panels fall back to
    normal document flow so tall content can never be trapped inside a snap point. */
@@ -97,7 +102,7 @@ body {
   }
 
   .bg-grid-fade {
-    background-image: linear-gradient(rgba(109,107,255,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(109,107,255,0.055) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
     background-size: 40px 40px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
   }

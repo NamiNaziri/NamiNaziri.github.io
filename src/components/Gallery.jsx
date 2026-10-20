@@ -13,7 +13,7 @@ function Media({ item, title, className = '' }) {
       />
     )
   }
-  return <img src={item.src} alt={title} loading="lazy" className={`h-full w-full object-contain ${className}`} />
+  return <img src={item.src} alt={title} loading="eager" className={`h-full w-full object-contain ${className}`} />
 }
 
 export default function Gallery({ items = [], title }) {
@@ -53,7 +53,8 @@ export default function Gallery({ items = [], title }) {
       }}
     >
       <div className="group relative aspect-video w-full overflow-hidden rounded-md bg-black/60 shadow-2xl ring-1 ring-white/10">
-        <Media item={active} title={title} />
+        {/* Remount on selection so animated GIFs start at frame one immediately. */}
+        <Media key={`${index}-${active.src || active.id}`} item={active} title={title} />
 
         {multiple && (
           <>
