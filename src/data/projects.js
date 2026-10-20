@@ -25,6 +25,8 @@ export const featuredProjects = [
     },
     gallery: [
       { kind: 'youtube', id: 'fCXc0gthyeQ', thumbnail: '/img/ends/tumb.jpg' },
+      { kind: 'youtube', id: 'MWt7l-fF6x4', start: 519, thumbnail: 'https://img.youtube.com/vi/MWt7l-fF6x4/hqdefault.jpg' },
+      { kind: 'youtube', id: 'lB3Qafh_9ho', start: 962, thumbnail: 'https://img.youtube.com/vi/lB3Qafh_9ho/hqdefault.jpg' },
       { kind: 'image', src: '/img/ends/6.gif', thumbnail: '/img/ends/6.png' },
       { kind: 'image', src: '/img/ends/7.gif', thumbnail: '/img/ends/7.png' },
       { kind: 'image', src: '/img/ends/steps.gif', thumbnail: '/img/ends/steps.png' },

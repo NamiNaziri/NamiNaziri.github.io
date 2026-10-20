@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: 'Nami Naziri',
   title: 'Gameplay & Animation Programmer',
-  photo: '/img/2.jpg',
+  photo: '/img/cv-photo.jpg',
   summary:
     "Hey there, my name is Nami. I hold a Master's in Computer Science from Aalto University and I'm proficient in Unreal Engine, particularly where gameplay, AI, and animation intersect. My experience includes working with animation components such as blending, layering, and state machines, as well as AI components such as behavior trees, smart objects, state trees, environment query systems, and AI perception.",
   links: {

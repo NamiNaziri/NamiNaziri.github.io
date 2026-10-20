@@ -6,7 +6,7 @@ function Media({ item, title, className = '' }) {
     return (
       <iframe
         className={`h-full w-full ${className}`}
-        src={`https://www.youtube.com/embed/${item.id}`}
+        src={`https://www.youtube.com/embed/${item.id}${item.start ? `?start=${item.start}` : ''}`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -97,6 +97,7 @@ export default function Gallery({ items = [], title }) {
               type="button"
               key={i}
               aria-label={`Show item ${i + 1}`}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => setIndex(i)}
               className={`h-12 w-[4.5rem] flex-shrink-0 overflow-hidden rounded border-2 transition-opacity md:h-14 md:w-20 ${
                 i === index ? 'border-accent opacity-100' : 'border-transparent opacity-50 hover:opacity-90'
