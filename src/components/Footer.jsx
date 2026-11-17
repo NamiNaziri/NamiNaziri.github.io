@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaItchIo } from 'react-icons/fa'
 import { personalInfo } from '../data/cv.jsx'
 
-const EMAIL = 'naminaziri1@gmail.com'
+const EMAIL = 'Nami.Naziri@yahoo.com'
 
 function Socials({ className = '' }) {
   return (
